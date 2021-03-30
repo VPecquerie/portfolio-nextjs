@@ -18,3 +18,4 @@ export const ResponsiveContainer = ({children}) => (
 ResponsiveContainer.propTypes = {
     children: PropTypes.node,
 };
+

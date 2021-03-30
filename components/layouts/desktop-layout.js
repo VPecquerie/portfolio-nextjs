@@ -18,9 +18,11 @@ export default class DesktopLayout extends Component {
 
         return (
             <Media greaterThan='mobile'>
-                <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
-                    <Segment inverted textAlign='center' style={{minHeight: 700, padding: '1em 0em'}} vertical>
-                        <Navbar fixed={fixed} />
+
+                <Segment inverted textAlign='center' style={{minHeight: 700, padding: '1em 0em'}} vertical>
+                    <Visibility once={false} onBottomPassed={this.showFixedMenu}
+                                onBottomPassedReverse={this.hideFixedMenu}>
+                        <Navbar fixed={fixed}/>
 
                         <h1>
                             Vincent PECQUERIE
@@ -30,23 +32,12 @@ export default class DesktopLayout extends Component {
                         </h2>
 
                         <Button>
-                            <Icon name="angle double down" />
+                            <Icon name="angle double down"/>
                         </Button>
-
-                    </Segment>
-                </Visibility>
-                <Segment textAlign='center' style={{minHeight: 700, padding: '1em 0em'}} vertical>
-
+                    </Visibility>
                 </Segment>
-                <Segment  inverted textAlign='center' style={{minHeight: 700, padding: '1em 0em'}} vertical>
 
-                </Segment>
-                <Segment textAlign='center' style={{minHeight: 700, padding: '1em 0em'}} vertical>
-
-                </Segment>
-                <Segment  inverted textAlign='center' style={{minHeight: 700, padding: '1em 0em'}} vertical>
-
-                </Segment>
+                {children}
 
             </Media>
         );

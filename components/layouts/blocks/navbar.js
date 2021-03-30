@@ -13,15 +13,14 @@ export class Navbar extends Component {
                     <Menu.Item as='a' active>
                         Home
                     </Menu.Item>
-                    <Menu.Item as='a'>A propos</Menu.Item>
-                    <Menu.Item as='a'>Experience</Menu.Item>
-                    <Menu.Item as='a'>Formation</Menu.Item>
-                    <Menu.Item as='a'>Projets</Menu.Item>
-                    <Menu.Item as='a'>Compétences</Menu.Item>
-                    <Menu.Item as='a'>Recommandations</Menu.Item>
+                    <Menu.Item href="#about">A propos</Menu.Item>
+                    <Menu.Item href="#experiences">Experience</Menu.Item>
+                    <Menu.Item href="#trainings">Formation</Menu.Item>
+                    <Menu.Item href="#projects">Projets</Menu.Item>
+                    <Menu.Item href="#skills">Compétences</Menu.Item>
                     <Menu.Menu position='right'>
-                        <Menu.Item as='a'>Contact</Menu.Item>
-                        <Menu.Item as='a'>Blog</Menu.Item>
+                        <Menu.Item href="#contact">Contact</Menu.Item>
+                        <Menu.Item href="https://blog.vincent-p.fr">Blog</Menu.Item>
                     </Menu.Menu>
                 </Container>
             </Menu>
@@ -30,5 +29,5 @@ export class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-    fixed: false
+    fixed: PropTypes.bool
 };
